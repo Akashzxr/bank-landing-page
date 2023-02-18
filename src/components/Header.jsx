@@ -28,6 +28,8 @@ const HeaderContainer = styled.div`
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background-color: white;
+ 
 `
 const Logo = styled.img`
   object-fit: contain;
