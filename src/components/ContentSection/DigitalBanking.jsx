@@ -33,7 +33,8 @@ const Container = styled.div`
   z-index: -1;
   position: relative;
   width: 100%;
-  height: 86vh;
+  height: 84vh;
+  
 `
 const TextContainer = styled.div`
   position: relative;
@@ -63,12 +64,13 @@ const Backgroundimg = styled.img`
 `
 
 const Mobileimg = styled.img`
-  position: absolute;
-  right: -7rem;
-  bottom: -10rem;
-  width: 41rem
+  position: relative;
+  right: -18.6rem;
+  bottom: 58rem;
+  width: 41rem;
 `
 
 const ImageContainer = styled.div`
-  
+  overflow: hidden;
+  height: 110vh;
 `
