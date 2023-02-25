@@ -62,6 +62,11 @@ const Menu = styled.div`
 `
 const A = styled.a`
   color: grey;
+  &:hover{
+    border-bottom: solid 3px transparent;
+    border-image: linear-gradient(to right,#31cf70,#2cb9cb);
+    border-image-slice: 1;
+  }
 `
 const Buttoncontainer = styled.span`
   @media (max-width: 600px) {

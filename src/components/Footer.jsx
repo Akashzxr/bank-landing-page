@@ -15,11 +15,11 @@ export default function Footer() {
           <LogosContainer>
               <MainLogo src={banklogo}/>
               <SocialLogos>
-                <a href='www.facebook.com'><Logo src={facebook}/></a>
-                <a href='www.youtube.com'><Logo src={youtube}/></a>
-                <a href='www.twitter.com'><Logo src={twitter}/></a>
-                <a href='www.pinterest.com'><Logo src={pinterest}/></a>
-                <a href='www.instagram.com'><Logo src={instagram}/></a>
+                <A href='www.facebook.com'><Logo src={facebook}/></A>
+                <A href='www.youtube.com'><Logo src={youtube}/></A>
+                <A href='www.twitter.com'><Logo src={twitter}/></A>
+                <A href='www.pinterest.com'><Logo src={pinterest}/></A>
+                <A href='www.instagram.com'><Logo src={instagram}/></A>
               </SocialLogos>
           </LogosContainer>
 
@@ -91,6 +91,13 @@ const SocialLogos = styled.div`
 `
 
 const Logo = styled.img`
+
+`
+
+const A = styled.a`
+&:hover{
+  color: #2cbdbb;
+}
 `
 
 const Options = styled.div`
@@ -107,6 +114,9 @@ const Option = styled.a`
   text-decoration: none;
   color: white;
   font-size: 14px;
+  &:hover{
+    color: #2cbdbb;
+  }
 `
 
 const BtnTxtcontainer = styled.div`

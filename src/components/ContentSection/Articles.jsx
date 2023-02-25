@@ -135,6 +135,9 @@ const ArticleHeading = styled.h1`
   font-weight: 100;
   word-break: break-word;
   white-space: break-spaces;
+  &:hover{
+    color: #31cf71;
+  }
 `
 
 const Description = styled.p`
