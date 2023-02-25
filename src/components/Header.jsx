@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import logo from '../assets/images/logo.svg'
 import hamburger from '../assets/images/icon-hamburger.svg'
@@ -6,11 +6,12 @@ import closed from '../assets/images/icon-close.svg'
 import Button from './Button'
 
 function Header() {
+  const [display,setdisplay] = useState(true);
   return (
     <HeaderContainer>
         <Logo src={logo}/>
 
-        <Menu>
+        <Menu display={display}>
             <A href='#'>Home</A>
             <A href='#'>About</A>
             <A href='#'>Contact</A>
@@ -22,8 +23,8 @@ function Header() {
           <Button/>
         </Buttoncontainer>
         
-        <Hamburgerlogo src={hamburger}/>
-        <Closedlogo src={closed}/>
+        <Hamburgerlogo src={hamburger} onClick={()=>setdisplay(false)} display={display} />
+        <Closedlogo src={closed} onClick={()=>setdisplay(true)} display={display}/>
         
     </HeaderContainer>
   )
@@ -48,7 +49,16 @@ const Menu = styled.div`
   display: flex;
   gap: 20px;
   @media (max-width: 600px) {
-    display: none; 
+    display: ${props => props.display ? 'none' : 'block'}
+    display: flex;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    left: 2rem;
+    top: 5rem;
+    border-radius: 10px;
+    align-items: center;
+    width: 82%;
   }
 `
 const A = styled.a`
@@ -60,14 +70,21 @@ const Buttoncontainer = styled.span`
   }
 `
 
+
 const Hamburgerlogo = styled.img`
   display: none;
   @media (max-width: 600px) {
-    display: block; 
+    display: ${props => props.display ? 'block' : 'none'}
   }
 `
 
+
 const Closedlogo = styled.img`
   display: none;
+  @media (max-width: 600px) {
+    display: ${props => props.display ? 'none' : 'block'}
+  }
 `
+
+
 export default Header
