@@ -93,6 +93,10 @@ const Container = styled.div`
   padding-bottom: 4rem;
   padding-left: 9rem;
   padding-top: 2rem;
+  @media (max-width: 600px){
+    padding: 0;
+    align-items: center;
+  }
 `
 
 const Heading = styled.h1`
@@ -104,6 +108,9 @@ const ArticleContainer = styled.div`
   gap: 15px;
   align-items: center;
   justify-content: center;
+  @media (max-width: 600px){
+    flex-direction: column;
+  }
 `
 
 const Article = styled.div`

@@ -48,21 +48,34 @@ const Container = styled.div`
   background-color: #2d314e;
   display: flex;
   justify-content: space-around;
-  
   padding-top: 3rem;
   padding-bottom: 3rem;
+  @media (max-width: 600px){
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 50vh;
+  }
 `
 
 const Details = styled.div`
   display: flex;
   gap: 5rem;
   height: 5rem;
+  @media (max-width: 600px){
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+  }
 `
 
 const LogosContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 600px){
+    gap: 21px;
+  }
 `
 
 const MainLogo = styled.img`
@@ -72,6 +85,9 @@ const MainLogo = styled.img`
 const SocialLogos = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 600px){
+    gap: 26px;
+  }
 `
 
 const Logo = styled.img`
@@ -81,6 +97,10 @@ const Options = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 600px){
+    align-items: center;
+    gap: 19px;
+  }
 `
 
 const Option = styled.a`
@@ -94,6 +114,10 @@ const BtnTxtcontainer = styled.div`
   flex-direction: column;
   align-items: end;
   justify-content: space-between;
+  @media (max-width: 600px){
+    align-items: center;
+    gap: 13px;
+  }
 `
 
 const Text = styled.div`

@@ -12,7 +12,7 @@ export default function WhyEasyBank() {
        <TextContainer>
           <Heading>Why choose Easybank?</Heading>
           <Paragraph>
-             we leverage Open Banking to turn your bank account into your financial hub.<br/>
+             we leverage Open Banking to turn your bank account into your financial hub.
              Control your finances like never before.
           </Paragraph>
        </TextContainer>
@@ -72,14 +72,21 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  
 `
 
 const TextContainer = styled.div`
-
+   @media (max-width: 600px){
+     display: flex;
+     flex-direction: column;
+   }
 `
 
 const Heading = styled.h1`
   font-weight: 100;
+  @media (max-width: 600px){
+    text-align: center;
+  }
 `
 
 const Paragraph = styled.p`
@@ -87,11 +94,18 @@ const Paragraph = styled.p`
   color: gray;
   font-size: 1.1rem;
   line-height: 1.5;
+  @media (max-width: 600px){
+    white-space: break-spaces;
+    text-align: center;
+  }
 `
 
 const FeatureContainer = styled.div`
   display: flex;
   gap: 1rem;
+  @media (max-width: 600px){
+    flex-direction: column;
+  }
 `
 
 const Feature = styled.div`
@@ -99,6 +113,9 @@ const Feature = styled.div`
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
+  @media (max-width: 600px){
+    align-items: center;
+  }
 `
 
 const Image = styled.img`
@@ -116,4 +133,7 @@ const FeatureDiscription = styled.p`
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
+  @media (max-width: 600px){
+    text-align: center;
+  }
 `
