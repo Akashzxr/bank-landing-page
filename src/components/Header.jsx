@@ -49,8 +49,7 @@ const Menu = styled.div`
   display: flex;
   gap: 20px;
   @media (max-width: 600px) {
-    display: ${props => props.display ? 'none' : 'block'}
-    display: flex;
+    display: ${props => props.display ? 'none' : 'flex'};
     position: absolute;
     background-color: white;
     flex-direction: column;
